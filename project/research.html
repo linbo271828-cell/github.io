@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;750&display=swap" rel="stylesheet">
 
-  <!-- IMPORTANT: use ../ paths because this file is in /projects -->
+  <!-- IMPORTANT: this file is in /projects so use ../ -->
   <link rel="stylesheet" href="../style.css" />
   <script defer src="../script.js"></script>
 </head>
@@ -31,7 +31,8 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="../index.html#about">About</a>
         <a href="../index.html#contact">Contact</a>
-        <a href="#cookie-clicker">Main Project</a>
+        <a href="#final-112">15-112</a>
+        <a href="#cookie-clicker">Cookie Clicker</a>
         <a href="#research">Research</a>
       </nav>
 
@@ -50,7 +51,8 @@
 
     <div id="mobilePanel" class="mobile-panel" aria-label="Mobile navigation">
       <a href="../index.html">Home</a>
-      <a href="#cookie-clicker">Main Project</a>
+      <a href="#final-112">15-112</a>
+      <a href="#cookie-clicker">Cookie Clicker</a>
       <a href="#research">Research</a>
       <a href="../index.html#contact">Contact</a>
     </div>
@@ -63,18 +65,45 @@
           <p class="kicker">Projects & Research</p>
           <h1 class="page-title">What I’m working on</h1>
           <p class="muted" style="max-width: 75ch;">
-            Clarification: I currently have <strong>one main engineering project</strong> (Cookie Clicker autotrader).
-            The other items here are <strong>research-style writeups</strong> (derivations/notes/technical analysis),
-            not fully “shipped products” yet.
+            Clarification: I currently have <strong>two real projects</strong> here:
+            <strong>my 15-112 final project</strong> and the <strong>Cookie Clicker autotrader</strong>.
+            The other items below are <strong>research-style writeups</strong> (notes/derivations/technical analysis), not deployed products yet.
           </p>
         </div>
 
-        <!-- MAIN PROJECT -->
-        <section id="cookie-clicker" class="card reveal anchor-pad">
-          <h2>Cookie Clicker Stock-Market Autotrader (Main Project)</h2>
+        <!-- 15-112 FINAL PROJECT -->
+        <section id="final-112" class="card reveal anchor-pad">
+          <div class="project-head">
+            <h2>15-112 Final Project (Playable)</h2>
+            <a class="link" href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">
+              Open full screen →
+            </a>
+          </div>
+
+          <p class="muted">
+            Built for CMU 15-112. This is an interactive app/game written in Python using CMU Graphics.
+            The embed below is sized to be comfortably viewable on desktop and still usable on mobile.
+          </p>
+
+          <div class="embed-frame">
+            <!-- REQUIRED embed code (kept). CSS makes it bigger/responsive. -->
+            <iframe width="410" height="460"
+              src="https://academy.cs.cmu.edu/sharing/blackPig251571/embed">
+            </iframe>
+          </div>
+
+          <div class="actions">
+            <a class="btn primary" href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">Play full screen</a>
+            <a class="btn" href="../index.html#projects">Back to homepage</a>
+          </div>
+        </section>
+
+        <!-- COOKIE CLICKER -->
+        <section id="cookie-clicker" class="card reveal anchor-pad" style="margin-top: 16px;">
+          <h2>Cookie Clicker Stock-Market Autotrader</h2>
           <p class="muted">
             A quantitative trading-agent project framed around decision-making under uncertainty.
-            Key pieces include:
+            This is my main “engineering” project beyond coursework.
           </p>
 
           <ul class="bullets muted">
@@ -95,7 +124,7 @@
             </div>
             <div class="callout">
               <strong>Links</strong>
-              <span class="muted">Add repo / writeup links below when ready</span>
+              <span class="muted">Add repo/writeup links when ready</span>
             </div>
           </div>
 
@@ -109,7 +138,7 @@
         <section id="research" class="section-head reveal" style="margin-top: 34px;">
           <p class="kicker">Research-style writeups</p>
           <h2>Notes I’ve written (not productized yet)</h2>
-          <p class="muted">These are closer to “research documentation” than deployed software.</p>
+          <p class="muted">These are closer to research documentation than deployed software.</p>
         </section>
 
         <div class="two-col">
@@ -127,7 +156,7 @@
           <article id="research-2" class="card reveal anchor-pad">
             <h3>Research writeup #2 — Technical note</h3>
             <p class="muted">
-              A technical note from systems/control work (methods, constraints, and measurement). Written to be reproducible and explain “why.”
+              A technical note (methods, constraints, measurement). Written to be reproducible and explain “why.”
             </p>
             <div class="actions">
               <a class="link" href="#" title="Replace with your doc/demo link">Doc / Demo (add link) →</a>
@@ -140,7 +169,6 @@
           <h2>This portfolio site</h2>
           <p class="muted">
             Pure HTML/CSS/JS, responsive layout, theme toggle, accessible navigation, and GitHub Pages-friendly paths.
-            The point is: easy to maintain and easy to extend.
           </p>
           <ul class="bullets muted">
             <li>No framework, no build step (works as static files).</li>
@@ -158,7 +186,8 @@
             <div class="muted">© <span id="year"></span> Linbo Gong</div>
             <div class="footer-links">
               <a href="../index.html">Home</a>
-              <a href="#cookie-clicker">Main Project</a>
+              <a href="#final-112">15-112</a>
+              <a href="#cookie-clicker">Cookie Clicker</a>
               <a href="#research">Research</a>
             </div>
           </div>

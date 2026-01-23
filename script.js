@@ -1,11 +1,3 @@
-/* Minimal, GitHub-Pages-safe JS:
-   - theme toggle (localStorage)
-   - mobile menu
-   - smooth scroll for in-page anchors
-   - reveal on scroll
-   - footer year
-*/
-
 (() => {
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
@@ -14,7 +6,7 @@
   const year = $("#year");
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // Theme
+  // Theme toggle
   const THEME_KEY = "linbo-theme";
   const root = document.documentElement;
   const themeBtn = $("#themeToggle");
@@ -59,15 +51,10 @@
     hamburger.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
-  // close on link click (mobile)
   $$("#mobilePanel a").forEach(a => a.addEventListener("click", closePanel));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closePanel(); });
 
-  // close on Esc
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closePanel();
-  });
-
-  // Smooth scroll (only for same-page anchors)
+  // Smooth scroll (same-page anchors only)
   $$('a[href^="#"]').forEach(a => {
     a.addEventListener("click", (e) => {
       const id = a.getAttribute("href");
@@ -85,9 +72,7 @@
   const els = $$(".reveal");
   if (els.length) {
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(ent => {
-        if (ent.isIntersecting) ent.target.classList.add("show");
-      });
+      entries.forEach(ent => { if (ent.isIntersecting) ent.target.classList.add("show"); });
     }, { threshold: 0.12 });
 
     els.forEach(el => io.observe(el));
