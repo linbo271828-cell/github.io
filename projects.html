@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Linbo Gong</title>
+  <meta name="description" content="Projects by Linbo Gong: quantitative simulation, math writing, and robotics control." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;450;600;750&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>Linbo Gong</strong>
+          <span>Projects</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="./#about">About</a>
+        <a href="#grid">All Projects</a>
+        <a href="./#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="icon-btn" href="Resume.pdf" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">📄</span>
+          <span>Resume</span>
+        </a>
+
+        <button id="themeToggle" class="icon-btn" type="button" aria-pressed="false" title="Toggle theme">
+          <span class="icon" aria-hidden="true">🌓</span>
+          <span data-label>Dark</span>
+        </button>
+
+        <button id="hamburger" class="icon-btn hamburger" type="button" aria-expanded="false" aria-controls="mobilePanel" title="Open menu">
+          <span class="icon" aria-hidden="true">☰</span>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobilePanel" class="mobile-panel" aria-label="Mobile">
+    <a href="./">Home</a>
+    <a href="#grid">All Projects</a>
+    <a href="./#contact">Contact</a>
+  </div>
+
+  <main id="main">
+    <section class="section tight">
+      <div class="container">
+        <div class="page-title reveal">
+          <div class="kicker">Projects</div>
+          <h1>Work that’s concrete, testable, and improving.</h1>
+          <p class="muted" style="max-width: 70ch;">
+            These are written to be understandable to a smart student: what I built, why it matters, and what’s next.
+            Some links are placeholders (I’ll swap them for real repos/write-ups as you publish them).
+          </p>
+
+          <div id="filters" class="filters" role="tablist" aria-label="Project filters">
+            <button class="filter active" data-filter="all" role="tab" aria-selected="true">All</button>
+            <button class="filter" data-filter="software" role="tab">Software</button>
+            <button class="filter" data-filter="quant" role="tab">Quant</button>
+            <button class="filter" data-filter="math" role="tab">Math</button>
+            <button class="filter" data-filter="robotics" role="tab">Robotics</button>
+          </div>
+        </div>
+
+        <div id="grid" class="project-grid" style="margin-top: 18px;">
+          <!-- 112 -->
+          <article id="112" class="project-tile reveal" data-tags="software">
+            <header>
+              <h2>15-112 Term Project</h2>
+              <span class="tagline">Python • CMU Graphics • OOP</span>
+            </header>
+            <p>
+              A large interactive Python application built for CMU’s Fundamentals of Programming course.
+              Emphasis on architecture, non-trivial game logic, and a polished experience.
+            </p>
+            <div class="actions">
+              <a class="link" href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">Play full screen ↗</a>
+              <a class="link" href="https://academy.cs.cmu.edu/sharing/blackPig251571/embed" target="_blank" rel="noopener">Embed link ↗</a>
+            </div>
+          </article>
+
+          <!-- Autotrader -->
+          <article id="autotrader" class="project-tile reveal" data-tags="software,quant">
+            <header>
+              <h2>Cookie Clicker Stock-Market Autotrader</h2>
+              <span class="tagline">POMDP • OU bands • Particle filter</span>
+            </header>
+            <p>
+              A quantitative agent design: state/action/cost formulation, OU-based band controllers,
+              and a tick-accurate simulator with transaction costs, inventory, and regimes. Experiments
+              planned vs. No-Trade and Buy & Hold with paired seeds.
+            </p>
+            <div class="actions">
+              <a class="link" href="#" title="Replace with your repo URL">Code (add repo URL)</a>
+              <a class="link" href="#" title="Replace with your write-up URL">Write-up (add link)</a>
+            </div>
+          </article>
+
+          <!-- Partition theory -->
+          <article id="partitions" class="project-tile reveal" data-tags="math">
+            <header>
+              <h2>Generating Functions in Partition Theory</h2>
+              <span class="tagline">Identities • Recurrences • Validation</span>
+            </header>
+            <p>
+              Derivation of classic partition identities and the pentagonal-number recurrence using generating functions.
+              Validated small-n counts against reference tables; discussed algorithmic implications and trade-offs.
+            </p>
+            <div class="actions">
+              <a class="link" href="#" title="Replace with your PDF or write-up link">Manuscript (add link)</a>
+            </div>
+          </article>
+
+          <!-- VEX -->
+          <article id="vex" class="project-tile reveal" data-tags="robotics,software">
+            <header>
+              <h2>VEX Robotics — Odometry & Motion Control</h2>
+              <span class="tagline">C++ • PID • CAD • Reliability</span>
+            </header>
+            <p>
+              Built odometry + PID motion control with auto-tuning; improved autonomous path error and consistency.
+              Added voltage-sag guards and thermal derate curves to reduce mid-match faults.
+            </p>
+            <div class="actions">
+              <a class="link" href="#" title="Replace with your code or demo link">Code / Demo (add link)</a>
+            </div>
+          </article>
+
+          <!-- Portfolio -->
+          <article id="portfolio" class="project-tile reveal" data-tags="software">
+            <header>
+              <h2>This Portfolio Website</h2>
+              <span class="tagline">HTML • CSS • JS • GitHub Pages</span>
+            </header>
+            <p>
+              A lightweight, multi-page site with a theme toggle, accessible navigation, and simple JS enhancements.
+              Designed to be easy to extend: add a new project tile and you’re done.
+            </p>
+            <div class="actions">
+              <a class="link" href="#" title="Replace with your GitHub repo URL">Repository (add repo URL)</a>
+            </div>
+          </article>
+
+          <!-- Placeholder -->
+          <article class="project-tile reveal" data-tags="software,math,quant,robotics">
+            <header>
+              <h2>Next Project (Placeholder)</h2>
+              <span class="tagline">Coming soon</span>
+            </header>
+            <p>
+              Reserve space for the next thing you ship. Add a short description + 1–2 links when it’s ready.
+            </p>
+            <div class="actions">
+              <a class="link" href="./">Back to home</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="card p-24 reveal" style="margin-top: 18px;">
+          <div class="kicker">Notes</div>
+          <p class="muted" style="margin: 8px 0 0;">
+            Want this page to feel more “real”? Drop screenshots into <span style="font-family: var(--mono);">assets/</span>,
+            then add <span style="font-family: var(--mono);">&lt;img&gt;</span> blocks inside each project tile.
+          </p>
+        </div>
+
+        <footer class="footer">
+          <div class="container row">
+            <div class="small">© <span id="year"></span> Linbo Gong</div>
+            <div class="small">
+              <a href="./">Home</a> ·
+              <a href="Resume.pdf" target="_blank" rel="noopener">Resume</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

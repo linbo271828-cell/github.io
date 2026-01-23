@@ -1,199 +1,348 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linbo Gong | Computational & Applied Mathematics</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Linbo Gong — Computational & Applied Mathematics</title>
+  <meta name="description" content="Linbo Gong — Computational & Applied Mathematics student at Carnegie Mellon University. Projects in quantitative modeling, simulation, and robotics." />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="Linbo Gong — Portfolio" />
+  <meta property="og:description" content="Projects in quantitative modeling, simulation, and robotics." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;450;600;750&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230ea5e9'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial' font-size='54' fill='white'%3EL%3C/text%3E%3C/svg%3E">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">L.G.</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+  <!-- NAV -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>Linbo Gong</strong>
+          <span>Computational & Applied Math @ CMU</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#featured">Featured</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="icon-btn" href="Resume.pdf" target="_blank" rel="noopener">
+          <span class="icon" aria-hidden="true">📄</span>
+          <span>Resume</span>
+        </a>
+
+        <button id="themeToggle" class="icon-btn" type="button" aria-pressed="false" title="Toggle theme">
+          <span class="icon" aria-hidden="true">🌓</span>
+          <span data-label>Dark</span>
+        </button>
+
+        <button id="hamburger" class="icon-btn hamburger" type="button" aria-expanded="false" aria-controls="mobilePanel" title="Open menu">
+          <span class="icon" aria-hidden="true">☰</span>
+          <span class="sr-only">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobilePanel" class="mobile-panel" aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#featured">Featured</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="projects.html">All Projects →</a>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="kicker">Quant-minded builder • proofs • systems</div>
+          <h1>Math-forward engineering for markets, models, and autonomy.</h1>
+          <p class="lead">
+            I’m Linbo, a Computational & Applied Mathematics student at Carnegie Mellon University.
+            I like turning ideas into clean implementations: simulators, control logic, and math-heavy write-ups.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="projects.html">Explore projects</a>
+            <a class="btn" href="mailto:linbog@andrew.cmu.edu">Email me</a>
+            <a class="btn" href="https://github.com/linbo271828-cell" target="_blank" rel="noopener">GitHub</a>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="badges">
+            <span class="badge"><strong>Currently:</strong> internships + research</span>
+            <span class="badge"><strong>Focus:</strong> simulation & quantitative modeling</span>
+            <span class="badge"><strong>Based:</strong> Pittsburgh, PA</span>
+          </div>
+        </div>
+
+        <div class="hero-meta">
+          <div class="photo-card reveal">
+            <!-- Replace assets/profile.svg with your real photo, e.g. assets/linbo.jpg -->
+            <img src="assets/profile.svg" alt="Photo of Linbo Gong (placeholder)" />
+            <div class="cap">
+              <span class="pill">B.S. Computational & Applied Math</span>
+              <span class="pill">Class of 2029</span>
+            </div>
+          </div>
+
+          <div class="stats reveal">
+            <div class="stat">
+              <strong>Markets + Models</strong>
+              <span>OU bands, PF belief, POMDP framing</span>
+            </div>
+            <div class="stat">
+              <strong>Robotics Control</strong>
+              <span>Odometry + PID with real constraints</span>
+            </div>
+            <div class="stat">
+              <strong>Math Writing</strong>
+              <span>Generating functions & identities</span>
+            </div>
+            <div class="stat">
+              <strong>Software Craft</strong>
+              <span>Readable, testable, reproducible</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="grid about-grid">
+          <div class="card p-32 reveal">
+            <div class="kicker">About</div>
+            <h2>Fast learner, obsessed with clarity.</h2>
+            <p>
+              I’m pursuing a B.S. in Computational & Applied Mathematics at Carnegie Mellon University (May 2029).
+              I’m especially drawn to mathematical finance, algorithmic reasoning, and building software that makes
+              abstract models concrete.
+            </p>
+            <p>
+              Outside class, I enjoy poker, pool, volleyball, and bouldering — and I love projects that force me to
+              bridge theory with implementation.
+            </p>
+
+            <div class="divider"></div>
+
+            <div class="kicker">Highlights</div>
+            <ul class="list">
+              <li>Building a tick-accurate market simulator + cost-aware trading controllers.</li>
+              <li>Deriving partition identities and validating recurrences against small-n tables.</li>
+              <li>Robotics: odometry + PID control, plus reliability measures for real matches.</li>
             </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+          </div>
 
-    <section id="hero">
-        <div class="container hero-content">
-            <div class="profile-img-container">
-                <img src="https://via.placeholder.com/200" alt="Linbo Gong" class="profile-img"> 
+          <aside class="skills reveal">
+            <div class="card p-24">
+              <div class="kicker">Skills</div>
+              <h3>Tools I actually use</h3>
+              <div class="divider"></div>
+
+              <div class="kicker">Languages</div>
+              <div class="skill-grid" aria-label="Programming languages">
+                <span class="chip">Python</span>
+                <span class="chip">C++</span>
+                <span class="chip">Java</span>
+                <span class="chip">SQL</span>
+                <span class="chip">JavaScript</span>
+                <span class="chip">PHP</span>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="kicker">Libraries & Tools</div>
+              <div class="skill-grid" aria-label="Libraries and tools">
+                <span class="chip">NumPy</span>
+                <span class="chip">pandas</span>
+                <span class="chip">matplotlib</span>
+                <span class="chip">Numba</span>
+                <span class="chip">MATLAB</span>
+                <span class="chip">Git/GitHub</span>
+                <span class="chip">CAD</span>
+                <span class="chip">Excel</span>
+              </div>
             </div>
-            <h1>Hi, I'm <span class="highlight">Linbo Gong</span>.</h1>
-            <p class="hero-subtitle">Computational & Applied Mathematics Student at CMU</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn primary">View My Work</a>
-                <a href="#contact" class="btn secondary">Get in Touch</a>
+
+            <div class="card p-24">
+              <div class="kicker">Quick Links</div>
+              <div class="divider"></div>
+              <p class="muted" style="margin:0 0 10px">
+                If you want the full story, the Projects page has the details.
+              </p>
+              <div class="project-actions">
+                <a class="btn primary" href="projects.html">All projects</a>
+                <a class="btn" href="Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+              </div>
             </div>
+          </aside>
         </div>
+      </div>
     </section>
 
-    <section id="about" class="section-padding">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        I am currently pursuing a B.S. in <strong>Computational and Applied Mathematics</strong> at <strong>Carnegie Mellon University</strong> (Class of 2029). My academic focus lies at the intersection of mathematical finance, algorithmic logic, and software engineering.
-                    </p>
-                    <p>
-                        Before CMU, I graduated from the American School of Warsaw with an IB Diploma. I have a strong competitive math background, having qualified for the <strong>USAMO</strong> (Top ~260 in the USA) and achieving Distinguished Honor Roll on the AIME.
-                    </p>
-                    <p>
-                        When I'm not coding or solving proofs, you can find me playing poker, pool, volleyball, or bouldering.
-                    </p>
-                </div>
-                <div class="skills-container">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-tags">
-                        <span>Python</span>
-                        <span>C++</span>
-                        <span>Java</span>
-                        <span>SQL</span>
-                        <span>JavaScript</span>
-                        <span>PHP</span>
-                        <span>NumPy/Pandas</span>
-                        <span>MATLAB</span>
-                        <span>Numba</span>
-                        <span>Git/GitHub</span>
-                        <span>CAD</span>
-                    </div>
-                </div>
+    <!-- FEATURED -->
+    <section id="featured" class="section tight">
+      <div class="container">
+        <div class="card p-32 reveal">
+          <div class="kicker">Featured project</div>
+          <div class="featured">
+            <div class="embed" aria-label="Embedded CS Academy project">
+              <iframe
+                src="https://academy.cs.cmu.edu/sharing/blackPig251571/embed"
+                title="15-112 Term Project (CS Academy embed)"
+                loading="lazy"
+                referrerpolicy="no-referrer">
+              </iframe>
             </div>
+
+            <div class="project-body">
+              <div class="project-head">
+                <h3>15-112 Term Project</h3>
+                <a href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">Open full screen ↗</a>
+              </div>
+
+              <p>
+                A large interactive Python application built for CMU’s Fundamentals of Programming course.
+                I focused on clean architecture (OOP + separation of concerns), non-trivial game logic, and a polished UX.
+              </p>
+
+              <div class="badges" aria-label="Technologies used">
+                <span class="badge">Python</span>
+                <span class="badge">CMU Graphics</span>
+                <span class="badge">OOP</span>
+                <span class="badge">State management</span>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="project-actions">
+                <a class="btn primary" href="projects.html#112">More details</a>
+                <a class="btn" href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">Play</a>
+              </div>
+
+              <p class="muted" style="margin: 14px 0 0;">
+                Tip: on mobile, the embed may be tight — use “Play” for the full-screen view.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="projects" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                
-                <article class="project-card">
-                    <div class="project-visual" style="padding: 20px;">
-                        <iframe width="410" height="460"
-                            src="https://academy.cs.cmu.edu/sharing/blackPig251571/embed"
-                            frameborder="0"
-                            style="border: none;"> 
-                        </iframe>
-                    </div>
-                    <div class="project-info">
-                        <h3>15-112 Term Project</h3>
-                        <p>
-                            A comprehensive, interactive Python application built for the Fundamentals of Programming course at CMU. 
-                            This project demonstrates object-oriented programming, complex algorithmic logic, and the use of the CMU Graphics library. 
-                            You can play the game directly in the window on the left!
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span><span>CMU Graphics</span><span>OOP</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Open Full Screen
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-visual">
-                        <div class="img-placeholder">[Trading Simulator Screenshot]</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Cookie Clicker Autotrader</h3>
-                        <p>
-                            Authored a technical plan and math write-up for a POMDP trading agent using OU-based bands and a particle-filter (PF) belief model. 
-                            Built a tick-accurate market simulator handling transaction costs, inventory, and regimes. 
-                            Currently designing experiments against Buy & Hold baselines.
-                        </p>
-                        <div class="project-tech">
-                            <span>Python</span><span>Math Finance</span><span>Simulation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code (Coming Soon)</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-visual">
-                        <div class="img-placeholder">[Math Proofs Screenshot]</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Generating Functions in Partition Theory</h3>
-                        <p>
-                            Developed a generating-function derivation of classic partition identities and the pentagonal-number recurrence. 
-                            Validated small-n counts against reference tables and analyzed algorithmic implications.
-                        </p>
-                        <div class="project-tech">
-                            <span>Pure Math</span><span>Algorithms</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="disabled"><i class="fas fa-file-alt"></i> Manuscript Available</a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-visual">
-                        <div class="img-placeholder">[Robot CAD Screenshot]</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>VEX Robotics Odometry</h3>
-                        <p>
-                            Designed drivetrain & gear ratios in CAD. Built odometry + PID motion control with an auto-tuner. 
-                            Introduced fault-tolerance measures (voltage-sag guards, thermal derate curves) which cut mid-match faults by 50%.
-                        </p>
-                        <div class="project-tech">
-                            <span>C++</span><span>PID Control</span><span>CAD</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i> View Code</a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
+    <!-- PROJECTS PREVIEW -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="reveal">
+          <div class="kicker">Projects</div>
+          <h2 style="margin: 6px 0 12px; font-size: 1.9rem;">A few things I’m building (details on the Projects page)</h2>
+          <p class="muted" style="margin: 0 0 20px;">
+            You asked to keep the homepage light: here are brief mentions + links to the full write-ups.
+          </p>
         </div>
+
+        <div class="preview-grid">
+          <div class="preview-card reveal">
+            <div class="kicker">Quant / Simulation</div>
+            <h4>Cookie Clicker Stock-Market Autotrader</h4>
+            <p>OU-based band control, PF belief state, and a reproducible simulator to compare against baselines.</p>
+            <a href="projects.html#autotrader">Read more →</a>
+          </div>
+
+          <div class="preview-card reveal">
+            <div class="kicker">Math / Algorithms</div>
+            <h4>Generating Functions in Partition Theory</h4>
+            <p>Derivations for classic identities + pentagonal-number recurrence; validated with small-n checks.</p>
+            <a href="projects.html#partitions">Read more →</a>
+          </div>
+
+          <div class="preview-card reveal">
+            <div class="kicker">Robotics / Control</div>
+            <h4>VEX Robotics Odometry</h4>
+            <p>Odometry + PID motion control with auto-tuning; reliability guards for voltage/thermal sag.</p>
+            <a href="projects.html#vex">Read more →</a>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card p-24 reveal">
+          <div class="kicker">This portfolio</div>
+          <p class="muted" style="margin: 8px 0 12px;">
+            The site you’re looking at is also a project — designed to be readable, fast, and easy to extend.
+          </p>
+          <div class="project-actions">
+            <!-- Update with your repo URL after you deploy -->
+            <a class="btn primary" href="projects.html#portfolio">How it’s built</a>
+            <a class="btn" href="projects.html">See all projects</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section-padding">
-        <div class="container contact-container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p>I'm currently looking for internships and research opportunities.</p>
-            
-            <div class="contact-links">
-                <a href="mailto:linbog@andrew.cmu.edu" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>linbog@andrew.cmu.edu</span>
-                </a>
-                <a href="https://linkedin.com/in/linbo-gong" target="_blank" class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/linbo271828-cell" target="_blank" class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-            </div>
+    <!-- CONTACT -->
+    <section id="contact" class="section tight">
+      <div class="container">
+        <div class="card p-32 reveal">
+          <div class="kicker">Contact</div>
+          <h2 style="margin: 6px 0 10px; font-size: 1.9rem;">Let’s talk.</h2>
+          <p class="muted" style="margin: 0 0 18px;">
+            I’m looking for internships and research opportunities. Best way to reach me: email.
+          </p>
+
+          <div class="contact-grid" role="list">
+            <a class="contact-item" role="listitem" href="mailto:linbog@andrew.cmu.edu">
+              <strong>Email</strong>
+              <span>linbog@andrew.cmu.edu</span>
+            </a>
+            <a class="contact-item" role="listitem" href="https://github.com/linbo271828-cell" target="_blank" rel="noopener">
+              <strong>GitHub</strong>
+              <span>github.com/linbo271828-cell</span>
+            </a>
+            <a class="contact-item" role="listitem" href="https://linkedin.com/in/linbo-gong" target="_blank" rel="noopener">
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/linbo-gong</span>
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span id="year"></span> Linbo Gong. All rights reserved.</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container row">
+        <div class="small">© <span id="year"></span> Linbo Gong</div>
+        <div class="small">
+          <a href="projects.html">Projects</a> ·
+          <a href="Resume.pdf" target="_blank" rel="noopener">Resume</a> ·
+          <a href="#about">Back to top</a>
+          <span class="muted">
+             AI assistance disclosure: parts of this website were drafted with help from AI tools (Google Gemini and ChatGPT), then reviewed and edited by me.
+          </span>
         </div>
+      </div>
     </footer>
+  </main>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
