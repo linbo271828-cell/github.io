@@ -1,40 +1,95 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Dynamic Year in Footer
-    const yearSpan = document.getElementById('year');
-    if(yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
+/* Minimal, GitHub-Pages-safe JS:
+   - theme toggle (localStorage)
+   - mobile menu
+   - smooth scroll for in-page anchors
+   - reveal on scroll
+   - footer year
+*/
+
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+  // Footer year
+  const year = $("#year");
+  if (year) year.textContent = String(new Date().getFullYear());
+
+  // Theme
+  const THEME_KEY = "linbo-theme";
+  const root = document.documentElement;
+  const themeBtn = $("#themeToggle");
+
+  function applyTheme(t) {
+    root.setAttribute("data-theme", t);
+    if (themeBtn) {
+      themeBtn.setAttribute("aria-pressed", t === "light" ? "true" : "false");
+      const label = themeBtn.querySelector("[data-label]");
+      if (label) label.textContent = t === "light" ? "Light" : "Dark";
     }
+  }
 
-    // 2. Mobile Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+  function initialTheme() {
+    const saved = localStorage.getItem(THEME_KEY);
+    if (saved === "light" || saved === "dark") return saved;
+    const prefersLight = window.matchMedia?.("(prefers-color-scheme: light)")?.matches;
+    return prefersLight ? "light" : "dark";
+  }
 
-    if(hamburger) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
+  applyTheme(initialTheme());
 
-    // 3. Smooth Scrolling for Anchor Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            // Close mobile menu if open
-            if(navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-            }
+  themeBtn?.addEventListener("click", () => {
+    const next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+    localStorage.setItem(THEME_KEY, next);
+    applyTheme(next);
+  });
 
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
+  // Mobile menu
+  const hamburger = $("#hamburger");
+  const panel = $("#mobilePanel");
 
-            if(targetElement){
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70, // Offset for fixed navbar
-                    behavior: 'smooth'
-                });
-            }
-        });
+  function closePanel() {
+    if (!panel) return;
+    panel.classList.remove("open");
+    hamburger?.setAttribute("aria-expanded", "false");
+  }
+
+  hamburger?.addEventListener("click", () => {
+    if (!panel) return;
+    const open = panel.classList.toggle("open");
+    hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  // close on link click (mobile)
+  $$("#mobilePanel a").forEach(a => a.addEventListener("click", closePanel));
+
+  // close on Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closePanel();
+  });
+
+  // Smooth scroll (only for same-page anchors)
+  $$('a[href^="#"]').forEach(a => {
+    a.addEventListener("click", (e) => {
+      const id = a.getAttribute("href");
+      if (!id || id.length < 2) return;
+      const target = $(id);
+      if (!target) return;
+      e.preventDefault();
+      closePanel();
+      const y = target.getBoundingClientRect().top + window.scrollY - 86;
+      window.scrollTo({ top: y, behavior: "smooth" });
     });
-});
+  });
+
+  // Reveal on scroll
+  const els = $$(".reveal");
+  if (els.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(ent => {
+        if (ent.isIntersecting) ent.target.classList.add("show");
+      });
+    }, { threshold: 0.12 });
+
+    els.forEach(el => io.observe(el));
+  }
+})();

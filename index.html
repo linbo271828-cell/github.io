@@ -2,124 +2,105 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Linbo Gong — Computational & Applied Mathematics</title>
-  <meta name="description" content="Linbo Gong — Computational & Applied Mathematics student at Carnegie Mellon University. Projects in quantitative modeling, simulation, and robotics." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Linbo Gong | Computational & Applied Mathematics</title>
+  <meta name="description" content="Linbo Gong — Computational & Applied Mathematics student at Carnegie Mellon University. Quant modeling, simulation, and research writing." />
 
-  <!-- Social preview -->
-  <meta property="og:title" content="Linbo Gong — Portfolio" />
-  <meta property="og:description" content="Projects in quantitative modeling, simulation, and robotics." />
-  <meta property="og:type" content="website" />
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;450;600;750&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;750&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230ea5e9'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial' font-size='54' fill='white'%3EL%3C/text%3E%3C/svg%3E">
+  <script defer src="script.js"></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- NAV -->
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="./">
+      <a class="brand" href="index.html">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
           <strong>Linbo Gong</strong>
-          <span>Computational & Applied Math @ CMU</span>
+          <span>Comp & Applied Math @ CMU</span>
         </span>
       </a>
 
       <nav class="nav-links" aria-label="Primary">
         <a href="#about">About</a>
-        <a href="#featured">Featured</a>
-        <a href="#projects">Projects</a>
+        <a href="#work">Work</a>
         <a href="#contact">Contact</a>
+        <a href="projects/research.html">Projects/Research</a>
       </nav>
 
       <div class="nav-actions">
-        <a class="icon-btn" href="Resume.pdf" target="_blank" rel="noopener">
-          <span class="icon" aria-hidden="true">📄</span>
-          <span>Resume</span>
-        </a>
-
         <button id="themeToggle" class="icon-btn" type="button" aria-pressed="false" title="Toggle theme">
-          <span class="icon" aria-hidden="true">🌓</span>
+          <span aria-hidden="true">🌓</span>
           <span data-label>Dark</span>
         </button>
 
         <button id="hamburger" class="icon-btn hamburger" type="button" aria-expanded="false" aria-controls="mobilePanel" title="Open menu">
-          <span class="icon" aria-hidden="true">☰</span>
+          <span aria-hidden="true">☰</span>
           <span class="sr-only">Menu</span>
         </button>
       </div>
     </div>
-  </header>
 
-  <div id="mobilePanel" class="mobile-panel" aria-label="Mobile">
-    <a href="#about">About</a>
-    <a href="#featured">Featured</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="projects.html">All Projects →</a>
-  </div>
+    <div id="mobilePanel" class="mobile-panel" aria-label="Mobile navigation">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <a href="projects.html">Projects/Research</a>
+    </div>
+  </header>
 
   <main id="main">
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
-        <div class="reveal">
-          <div class="kicker">Quant-minded builder • proofs • systems</div>
-          <h1>Math-forward engineering for markets, models, and autonomy.</h1>
+        <div class="hero-copy reveal">
+          <p class="kicker">Quant + simulation • research writing • clean implementations</p>
+          <h1>Math-first engineering that turns models into working systems.</h1>
           <p class="lead">
-            I’m Linbo, a Computational & Applied Mathematics student at Carnegie Mellon University.
-            I like turning ideas into clean implementations: simulators, control logic, and math-heavy write-ups.
+            I’m Linbo, a Computational & Applied Mathematics student at Carnegie Mellon University (Class of 2029).
+            I’m interested in quantitative modeling, algorithmic reasoning, and building software that makes theory testable.
           </p>
 
-          <div class="hero-cta">
-            <a class="btn primary" href="projects.html">Explore projects</a>
-            <a class="btn" href="mailto:linbog@andrew.cmu.edu">Email me</a>
+          <div class="cta-row">
+            <a class="btn primary" href="projects.html#cookie-clicker">See my main project</a>
+            <a class="btn" href="mailto:linbog@andrew.cmu.edu">Email</a>
             <a class="btn" href="https://github.com/linbo271828-cell" target="_blank" rel="noopener">GitHub</a>
           </div>
 
-          <div class="divider"></div>
-
-          <div class="badges">
-            <span class="badge"><strong>Currently:</strong> internships + research</span>
-            <span class="badge"><strong>Focus:</strong> simulation & quantitative modeling</span>
-            <span class="badge"><strong>Based:</strong> Pittsburgh, PA</span>
+          <div class="chips">
+            <span class="chip">Currently seeking internships + research</span>
+            <span class="chip">Pittsburgh, PA</span>
           </div>
         </div>
 
-        <div class="hero-meta">
-          <div class="photo-card reveal">
-            <!-- Replace assets/profile.svg with your real photo, e.g. assets/linbo.jpg -->
-            <img src="assets/profile.svg" alt="Photo of Linbo Gong (placeholder)" />
-            <div class="cap">
-              <span class="pill">B.S. Computational & Applied Math</span>
-              <span class="pill">Class of 2029</span>
-            </div>
-          </div>
-
-          <div class="stats reveal">
-            <div class="stat">
-              <strong>Markets + Models</strong>
-              <span>OU bands, PF belief, POMDP framing</span>
-            </div>
-            <div class="stat">
-              <strong>Robotics Control</strong>
-              <span>Odometry + PID with real constraints</span>
-            </div>
-            <div class="stat">
-              <strong>Math Writing</strong>
-              <span>Generating functions & identities</span>
-            </div>
-            <div class="stat">
-              <strong>Software Craft</strong>
-              <span>Readable, testable, reproducible</span>
+        <div class="hero-card reveal">
+          <!-- Replace src with your real photo later (e.g., assets/linbo.jpg). -->
+          <img class="avatar" src="https://via.placeholder.com/640x640.png?text=Add+Your+Photo" alt="Linbo Gong (placeholder photo)" />
+          <div class="hero-card-body">
+            <div class="mini-grid">
+              <div class="mini">
+                <strong>Focus</strong>
+                <span class="muted">Quant modeling & simulation</span>
+              </div>
+              <div class="mini">
+                <strong>Strength</strong>
+                <span class="muted">Clear proofs + readable code</span>
+              </div>
+              <div class="mini">
+                <strong>Interests</strong>
+                <span class="muted">Poker, volleyball, bouldering</span>
+              </div>
+              <div class="mini">
+                <strong>Next</strong>
+                <span class="muted">Ship + measure + iterate</span>
+              </div>
             </div>
           </div>
         </div>
@@ -127,219 +108,152 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="section about">
+    <section id="about" class="section">
       <div class="container">
-        <div class="grid about-grid">
-          <div class="card p-32 reveal">
-            <div class="kicker">About</div>
-            <h2>Fast learner, obsessed with clarity.</h2>
-            <p>
+        <div class="section-head reveal">
+          <p class="kicker">About</p>
+          <h2>Personal, but not fluffy.</h2>
+          <p class="muted">
+            I like problems where you have to be precise: define a model, state assumptions, implement it cleanly,
+            and test it against baselines.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <article class="card reveal">
+            <h3>Bio</h3>
+            <p class="muted">
               I’m pursuing a B.S. in Computational & Applied Mathematics at Carnegie Mellon University (May 2029).
-              I’m especially drawn to mathematical finance, algorithmic reasoning, and building software that makes
-              abstract models concrete.
+              I’m drawn to mathematical finance, algorithmic logic, and systems that require careful reasoning.
             </p>
-            <p>
-              Outside class, I enjoy poker, pool, volleyball, and bouldering — and I love projects that force me to
-              bridge theory with implementation.
+            <p class="muted">
+              Outside school, I enjoy poker, pool, volleyball, and bouldering — and I like writing up results clearly
+              (so future-me can reproduce them).
             </p>
+            <div class="divider"></div>
+            <p class="muted">
+              If you’re skimming: my main current engineering project is a <strong>Cookie Clicker stock-market autotrader</strong>
+              (simulator + strategy design). I also have a couple of <strong>research-style writeups</strong> linked below.
+            </p>
+          </article>
+
+          <aside class="card reveal">
+            <h3>Skills</h3>
+            <div class="pill-grid" aria-label="Skill list">
+              <span class="pill">Python</span>
+              <span class="pill">C++</span>
+              <span class="pill">Java</span>
+              <span class="pill">SQL</span>
+              <span class="pill">JavaScript</span>
+              <span class="pill">NumPy / pandas</span>
+              <span class="pill">MATLAB</span>
+              <span class="pill">Git / GitHub</span>
+              <span class="pill">CAD</span>
+            </div>
 
             <div class="divider"></div>
 
-            <div class="kicker">Highlights</div>
-            <ul class="list">
-              <li>Building a tick-accurate market simulator + cost-aware trading controllers.</li>
-              <li>Deriving partition identities and validating recurrences against small-n tables.</li>
-              <li>Robotics: odometry + PID control, plus reliability measures for real matches.</li>
-            </ul>
-          </div>
-
-          <aside class="skills reveal">
-            <div class="card p-24">
-              <div class="kicker">Skills</div>
-              <h3>Tools I actually use</h3>
-              <div class="divider"></div>
-
-              <div class="kicker">Languages</div>
-              <div class="skill-grid" aria-label="Programming languages">
-                <span class="chip">Python</span>
-                <span class="chip">C++</span>
-                <span class="chip">Java</span>
-                <span class="chip">SQL</span>
-                <span class="chip">JavaScript</span>
-                <span class="chip">PHP</span>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="kicker">Libraries & Tools</div>
-              <div class="skill-grid" aria-label="Libraries and tools">
-                <span class="chip">NumPy</span>
-                <span class="chip">pandas</span>
-                <span class="chip">matplotlib</span>
-                <span class="chip">Numba</span>
-                <span class="chip">MATLAB</span>
-                <span class="chip">Git/GitHub</span>
-                <span class="chip">CAD</span>
-                <span class="chip">Excel</span>
-              </div>
-            </div>
-
-            <div class="card p-24">
-              <div class="kicker">Quick Links</div>
-              <div class="divider"></div>
-              <p class="muted" style="margin:0 0 10px">
-                If you want the full story, the Projects page has the details.
-              </p>
-              <div class="project-actions">
-                <a class="btn primary" href="projects.html">All projects</a>
-                <a class="btn" href="Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
-              </div>
+            <h3>Quick links</h3>
+            <div class="link-list">
+              <a class="link" href="projects.html">Projects/Research page →</a>
+              <a class="link" href="mailto:linbog@andrew.cmu.edu">linbog@andrew.cmu.edu</a>
+              <a class="link" href="https://linkedin.com/in/linbo-gong" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="link" href="https://github.com/linbo271828-cell" target="_blank" rel="noopener">GitHub</a>
             </div>
           </aside>
         </div>
       </div>
     </section>
 
-    <!-- FEATURED -->
-    <section id="featured" class="section tight">
+    <!-- WORK (brief, per your request) -->
+    <section id="work" class="section alt">
       <div class="container">
-        <div class="card p-32 reveal">
-          <div class="kicker">Featured project</div>
-          <div class="featured">
-            <div class="embed" aria-label="Embedded CS Academy project">
-              <iframe
-                src="https://academy.cs.cmu.edu/sharing/blackPig251571/embed"
-                title="15-112 Term Project (CS Academy embed)"
-                loading="lazy"
-                referrerpolicy="no-referrer">
-              </iframe>
-            </div>
-
-            <div class="project-body">
-              <div class="project-head">
-                <h3>15-112 Term Project</h3>
-                <a href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">Open full screen ↗</a>
-              </div>
-
-              <p>
-                A large interactive Python application built for CMU’s Fundamentals of Programming course.
-                I focused on clean architecture (OOP + separation of concerns), non-trivial game logic, and a polished UX.
-              </p>
-
-              <div class="badges" aria-label="Technologies used">
-                <span class="badge">Python</span>
-                <span class="badge">CMU Graphics</span>
-                <span class="badge">OOP</span>
-                <span class="badge">State management</span>
-              </div>
-
-              <div class="divider"></div>
-
-              <div class="project-actions">
-                <a class="btn primary" href="projects.html#112">More details</a>
-                <a class="btn" href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">Play</a>
-              </div>
-
-              <p class="muted" style="margin: 14px 0 0;">
-                Tip: on mobile, the embed may be tight — use “Play” for the full-screen view.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS PREVIEW -->
-    <section id="projects" class="section">
-      <div class="container">
-        <div class="reveal">
-          <div class="kicker">Projects</div>
-          <h2 style="margin: 6px 0 12px; font-size: 1.9rem;">A few things I’m building (details on the Projects page)</h2>
-          <p class="muted" style="margin: 0 0 20px;">
-            You asked to keep the homepage light: here are brief mentions + links to the full write-ups.
+        <div class="section-head reveal">
+          <p class="kicker">Work</p>
+          <h2>Current project + research notes</h2>
+          <p class="muted">
+            Homepage is intentionally brief. Full details live on the Projects/Research page.
           </p>
         </div>
 
-        <div class="preview-grid">
-          <div class="preview-card reveal">
-            <div class="kicker">Quant / Simulation</div>
-            <h4>Cookie Clicker Stock-Market Autotrader</h4>
-            <p>OU-based band control, PF belief state, and a reproducible simulator to compare against baselines.</p>
-            <a href="projects.html#autotrader">Read more →</a>
-          </div>
+        <div class="cards-3">
+          <article class="card reveal">
+            <h3>Cookie Clicker Stock-Market Autotrader</h3>
+            <p class="muted">
+              My main project: a POMDP-style trading agent design with a tick-accurate simulator,
+              transaction costs, and strategy evaluation against baselines.
+            </p>
+            <a class="link" href="projects.html#cookie-clicker">Read details →</a>
+          </article>
 
-          <div class="preview-card reveal">
-            <div class="kicker">Math / Algorithms</div>
-            <h4>Generating Functions in Partition Theory</h4>
-            <p>Derivations for classic identities + pentagonal-number recurrence; validated with small-n checks.</p>
-            <a href="projects.html#partitions">Read more →</a>
-          </div>
+          <article class="card reveal">
+            <h3>Research writeup #1</h3>
+            <p class="muted">
+              A math-focused research-style note (derivations + validation). Not a “shipped product” yet — a writeup.
+            </p>
+            <a class="link" href="projects.html#research-1">Read details →</a>
+          </article>
 
-          <div class="preview-card reveal">
-            <div class="kicker">Robotics / Control</div>
-            <h4>VEX Robotics Odometry</h4>
-            <p>Odometry + PID motion control with auto-tuning; reliability guards for voltage/thermal sag.</p>
-            <a href="projects.html#vex">Read more →</a>
-          </div>
+          <article class="card reveal">
+            <h3>Research writeup #2</h3>
+            <p class="muted">
+              A technical/research note from robotics/control work (methods, constraints, measurements).
+            </p>
+            <a class="link" href="projects.html#research-2">Read details →</a>
+          </article>
         </div>
 
-        <div class="divider"></div>
-
-        <div class="card p-24 reveal">
-          <div class="kicker">This portfolio</div>
-          <p class="muted" style="margin: 8px 0 12px;">
-            The site you’re looking at is also a project — designed to be readable, fast, and easy to extend.
+        <div class="card reveal" style="margin-top: 16px;">
+          <h3>This portfolio</h3>
+          <p class="muted">
+            This website is a small engineering project too: responsive, accessible navigation, and minimal JS.
           </p>
-          <div class="project-actions">
-            <!-- Update with your repo URL after you deploy -->
-            <a class="btn primary" href="projects.html#portfolio">How it’s built</a>
-            <a class="btn" href="projects.html">See all projects</a>
-          </div>
+          <a class="link" href="projects.html#portfolio">How it’s built →</a>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section tight">
+    <section id="contact" class="section">
       <div class="container">
-        <div class="card p-32 reveal">
-          <div class="kicker">Contact</div>
-          <h2 style="margin: 6px 0 10px; font-size: 1.9rem;">Let’s talk.</h2>
-          <p class="muted" style="margin: 0 0 18px;">
-            I’m looking for internships and research opportunities. Best way to reach me: email.
-          </p>
+        <div class="section-head reveal">
+          <p class="kicker">Contact</p>
+          <h2>Let’s connect.</h2>
+          <p class="muted">Best way to reach me is email.</p>
+        </div>
 
-          <div class="contact-grid" role="list">
-            <a class="contact-item" role="listitem" href="mailto:linbog@andrew.cmu.edu">
-              <strong>Email</strong>
-              <span>linbog@andrew.cmu.edu</span>
-            </a>
-            <a class="contact-item" role="listitem" href="https://github.com/linbo271828-cell" target="_blank" rel="noopener">
-              <strong>GitHub</strong>
-              <span>github.com/linbo271828-cell</span>
-            </a>
-            <a class="contact-item" role="listitem" href="https://linkedin.com/in/linbo-gong" target="_blank" rel="noopener">
-              <strong>LinkedIn</strong>
-              <span>linkedin.com/in/linbo-gong</span>
-            </a>
-          </div>
+        <div class="contact-grid">
+          <a class="contact-card reveal" href="mailto:linbog@andrew.cmu.edu">
+            <strong>Email</strong>
+            <span class="muted">linbog@andrew.cmu.edu</span>
+          </a>
+          <a class="contact-card reveal" href="https://github.com/linbo271828-cell" target="_blank" rel="noopener">
+            <strong>GitHub</strong>
+            <span class="muted">linbo271828-cell</span>
+          </a>
+          <a class="contact-card reveal" href="https://linkedin.com/in/linbo-gong" target="_blank" rel="noopener">
+            <strong>LinkedIn</strong>
+            <span class="muted">linbo-gong</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
-      <div class="container row">
-        <div class="small">© <span id="year"></span> Linbo Gong</div>
-        <div class="small">
-          <a href="projects.html">Projects</a> ·
-          <a href="Resume.pdf" target="_blank" rel="noopener">Resume</a> ·
-          <a href="#about">Back to top</a>
+      <div class="container footer-row">
+        <div class="muted">© <span id="year"></span> Linbo Gong</div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="projects.html">Projects/Research</a>
+          <a href="#contact">Contact</a>
         </div>
+      </div>
+      <div class="container">
+        <p class="muted ai-disclosure">
+          AI assistance disclosure: parts of this website were drafted with help from AI tools (Google Gemini and ChatGPT), then reviewed and edited by me.
+        </p>
       </div>
     </footer>
   </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
