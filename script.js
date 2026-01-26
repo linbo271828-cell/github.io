@@ -2,6 +2,12 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 
+  // Prevent browser from restoring scroll position (feels like "jumping")
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+  window.addEventListener("load", () => {
+    if (!location.hash) window.scrollTo(0, 0);
+  });
+
   // Footer year
   const year = $("#year");
   if (year) year.textContent = String(new Date().getFullYear());
@@ -74,7 +80,6 @@
     const io = new IntersectionObserver((entries) => {
       entries.forEach(ent => { if (ent.isIntersecting) ent.target.classList.add("show"); });
     }, { threshold: 0.12 });
-
     els.forEach(el => io.observe(el));
   }
 })();

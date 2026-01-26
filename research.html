@@ -3,16 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects & Research | Linbo Gong</title>
-  <meta name="description" content="Projects and research writeups by Linbo Gong." />
+  <title>Projects | Linbo Gong</title>
+  <meta name="description" content="Projects by Linbo Gong." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;750&display=swap" rel="stylesheet">
 
-  <!-- IMPORTANT: this file is in /projects so use ../ -->
-  <link rel="stylesheet" href="../style.css" />
-  <script defer src="../script.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -20,20 +19,19 @@
 
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="../index.html">
+      <a class="brand" href="index.html">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
           <strong>Linbo Gong</strong>
-          <span>Projects & Research</span>
+          <span>Projects</span>
         </span>
       </a>
 
       <nav class="nav-links" aria-label="Primary">
-        <a href="../index.html#about">About</a>
-        <a href="../index.html#contact">Contact</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="#cookie-clicker">Autotrader</a>
         <a href="#final-112">15-112</a>
-        <a href="#cookie-clicker">Cookie Clicker</a>
-        <a href="#research">Research</a>
       </nav>
 
       <div class="nav-actions">
@@ -50,11 +48,10 @@
     </div>
 
     <div id="mobilePanel" class="mobile-panel" aria-label="Mobile navigation">
-      <a href="../index.html">Home</a>
+      <a href="index.html">Home</a>
+      <a href="#cookie-clicker">Autotrader</a>
       <a href="#final-112">15-112</a>
-      <a href="#cookie-clicker">Cookie Clicker</a>
-      <a href="#research">Research</a>
-      <a href="../index.html#contact">Contact</a>
+      <a href="index.html#contact">Contact</a>
     </div>
   </header>
 
@@ -62,55 +59,27 @@
     <section class="section">
       <div class="container">
         <div class="section-head reveal">
-          <p class="kicker">Projects & Research</p>
-          <h1 class="page-title">What I’m working on</h1>
+          <p class="kicker">Projects</p>
+          <h1 class="page-title">Cookie Clicker autotrader + 15-112</h1>
           <p class="muted" style="max-width: 75ch;">
-            Clarification: I currently have <strong>two real projects</strong> here:
-            <strong>my 15-112 final project</strong> and the <strong>Cookie Clicker autotrader</strong>.
-            The other items below are <strong>research-style writeups</strong> (notes/derivations/technical analysis), not deployed products yet.
+            Here are my current projects: the Cookie Clicker stock-market autotrader (main independent project),
+            and my CMU 15-112 final project (playable embed).
           </p>
         </div>
 
-        <!-- 15-112 FINAL PROJECT -->
-        <section id="final-112" class="card reveal anchor-pad">
-          <div class="project-head">
-            <h2>15-112 Final Project (Playable)</h2>
-            <a class="link" href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">
-              Open full screen →
-            </a>
-          </div>
-
-          <p class="muted">
-            Built for CMU 15-112. This is an interactive app/game written in Python using CMU Graphics.
-            The embed below is sized to be comfortably viewable on desktop and still usable on mobile.
-          </p>
-
-          <div class="embed-frame">
-            <!-- REQUIRED embed code (kept). CSS makes it bigger/responsive. -->
-            <iframe width="410" height="460"
-              src="https://academy.cs.cmu.edu/sharing/blackPig251571/embed">
-            </iframe>
-          </div>
-
-          <div class="actions">
-            <a class="btn primary" href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">Play full screen</a>
-            <a class="btn" href="../index.html#projects">Back to homepage</a>
-          </div>
-        </section>
-
-        <!-- COOKIE CLICKER -->
-        <section id="cookie-clicker" class="card reveal anchor-pad" style="margin-top: 16px;">
+        <!-- COOKIE CLICKER FIRST (so it doesn't feel like it jumps into 112) -->
+        <section id="cookie-clicker" class="card reveal anchor-pad">
           <h2>Cookie Clicker Stock-Market Autotrader</h2>
           <p class="muted">
-            A quantitative trading-agent project framed around decision-making under uncertainty.
-            This is my main “engineering” project beyond coursework.
+            A trading-agent project framed around decision-making under uncertainty. I’m building this with
+            an emphasis on measurement: tick-accurate simulation, clear assumptions, and comparisons vs baselines.
           </p>
 
           <ul class="bullets muted">
             <li><strong>Modeling:</strong> OU-style mean reversion + regime behavior assumptions.</li>
-            <li><strong>Decision structure:</strong> cost-aware band/control logic; exploration of POMDP-style framing.</li>
-            <li><strong>Engineering:</strong> tick-accurate simulator with transaction costs, inventory, and reproducible experiments.</li>
-            <li><strong>Evaluation:</strong> planned comparisons vs. no-trade and buy/hold baselines (paired seeds).</li>
+            <li><strong>Decision logic:</strong> cost-aware bands / control policies (with a POMDP-style framing direction).</li>
+            <li><strong>Engineering:</strong> simulator with transaction costs, inventory, and reproducible experiments.</li>
+            <li><strong>Evaluation:</strong> planned comparisons vs no-trade and buy/hold baselines (paired seeds).</li>
           </ul>
 
           <div class="callouts">
@@ -134,66 +103,56 @@
           </div>
         </section>
 
-        <!-- RESEARCH -->
-        <section id="research" class="section-head reveal" style="margin-top: 34px;">
-          <p class="kicker">Research-style writeups</p>
-          <h2>Notes I’ve written (not productized yet)</h2>
-          <p class="muted">These are closer to research documentation than deployed software.</p>
+        <!-- 15-112 FINAL PROJECT -->
+        <section id="final-112" class="card reveal anchor-pad" style="margin-top: 16px;">
+          <div class="project-head">
+            <h2>15-112 Final Project (Playable)</h2>
+            <a class="link" href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">
+              Open full screen →
+            </a>
+          </div>
+
+          <p class="muted">
+            Built for CMU 15-112 in Python using CMU Graphics. The embed below is sized to be comfortably viewable.
+          </p>
+
+          <div class="embed-frame">
+            <iframe width="410" height="460"
+              src="https://academy.cs.cmu.edu/sharing/blackPig251571/embed">
+            </iframe>
+          </div>
+
+          <div class="actions">
+            <a class="btn primary" href="https://academy.cs.cmu.edu/sharing/blackPig251571" target="_blank" rel="noopener">Play full screen</a>
+            <a class="btn" href="index.html#projects">Back to homepage</a>
+          </div>
         </section>
-
-        <div class="two-col">
-          <article id="research-1" class="card reveal anchor-pad">
-            <h3>Research writeup #1 — Math note</h3>
-            <p class="muted">
-              A proof/derivation-focused writeup exploring a topic I care about. Emphasis on clarity,
-              definitions, and checking results on small cases.
-            </p>
-            <div class="actions">
-              <a class="link" href="#" title="Replace with your PDF or doc link">PDF / Doc (add link) →</a>
-            </div>
-          </article>
-
-          <article id="research-2" class="card reveal anchor-pad">
-            <h3>Research writeup #2 — Technical note</h3>
-            <p class="muted">
-              A technical note (methods, constraints, measurement). Written to be reproducible and explain “why.”
-            </p>
-            <div class="actions">
-              <a class="link" href="#" title="Replace with your doc/demo link">Doc / Demo (add link) →</a>
-            </div>
-          </article>
-        </div>
 
         <!-- PORTFOLIO -->
         <section id="portfolio" class="card reveal anchor-pad" style="margin-top: 16px;">
           <h2>This portfolio site</h2>
           <p class="muted">
-            Pure HTML/CSS/JS, responsive layout, theme toggle, accessible navigation, and GitHub Pages-friendly paths.
+            Pure HTML/CSS/JS, responsive layout, theme toggle, accessible navigation, GitHub Pages friendly.
           </p>
           <ul class="bullets muted">
-            <li>No framework, no build step (works as static files).</li>
-            <li>Relative paths that work in subfolders (important for GitHub Pages).</li>
-            <li>Small JS: theme toggle, mobile menu, scroll reveal, year.</li>
+            <li>No framework, no build step.</li>
+            <li>Relative links that work on GitHub Pages.</li>
+            <li>Small JS: theme toggle, mobile menu, reveal, year.</li>
           </ul>
-          <div class="actions">
-            <a class="btn primary" href="#" title="Replace with your repo URL">Site repo (add link)</a>
-            <a class="btn" href="../index.html">Back to home</a>
-          </div>
         </section>
 
         <footer class="footer" style="margin-top: 42px;">
           <div class="container footer-row">
             <div class="muted">© <span id="year"></span> Linbo Gong</div>
             <div class="footer-links">
-              <a href="../index.html">Home</a>
+              <a href="index.html">Home</a>
+              <a href="#cookie-clicker">Autotrader</a>
               <a href="#final-112">15-112</a>
-              <a href="#cookie-clicker">Cookie Clicker</a>
-              <a href="#research">Research</a>
             </div>
           </div>
           <div class="container">
             <p class="muted ai-disclosure">
-              AI assistance disclosure: parts of this website were drafted with help from AI tools (Google Gemini and ChatGPT), then reviewed and edited by me.
+              AI assistance disclosure: parts of this website were drafted with help from AI tools (ChatGPT), then reviewed and edited by me.
             </p>
           </div>
         </footer>
@@ -202,4 +161,3 @@
   </main>
 </body>
 </html>
-
