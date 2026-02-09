@@ -23,7 +23,7 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">
           <strong>Linbo Gong</strong>
-          <span>Quant trading • software engineering</span>
+          <span>Quant trading &bull; software engineering</span>
         </span>
       </a>
 
@@ -36,12 +36,12 @@
 
       <div class="nav-actions">
         <button id="themeToggle" class="icon-btn" type="button" aria-pressed="false" title="Toggle theme">
-          <span aria-hidden="true">🌓</span>
+          <span aria-hidden="true">&#x1F313;</span>
           <span data-label>Dark</span>
         </button>
 
         <button id="hamburger" class="icon-btn hamburger" type="button" aria-expanded="false" aria-controls="mobilePanel" title="Open menu">
-          <span aria-hidden="true">☰</span>
+          <span aria-hidden="true">&#9776;</span>
           <span class="sr-only">Menu</span>
         </button>
       </div>
@@ -60,15 +60,16 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="kicker">quant trading • software engineering • modeling</p>
+          <p class="kicker">quant trading &bull; software engineering &bull; modeling</p>
           <h1>Linbo Gong</h1>
           <p class="lead">
-            CMU Computational & Applied Mathematics (Class of 2029). I build trading-style simulators and strategies,
+            CMU Computational &amp; Applied Mathematics (Class of 2029). I build trading-style simulators and strategies,
             and I care about clean implementation + honest evaluation (baselines, controlled experiments, and reproducibility).
           </p>
 
           <div class="cta-row">
             <a class="btn primary" href="research.html#cookie-clicker">Cookie Clicker Autotrader</a>
+            <a class="btn" href="https://quant-risk-snapshot.vercel.app" target="_blank" rel="noopener">Quant Risk Snapshot</a>
             <a class="btn" href="research.html#final-112">15-112 Final Project</a>
             <a class="btn" href="mailto:linbog@andrew.cmu.edu">Email</a>
           </div>
@@ -117,8 +118,8 @@
           <article class="card reveal">
             <h3>Bio</h3>
             <p class="muted">
-              I’m pursuing a B.S. in Computational & Applied Mathematics at Carnegie Mellon University (May 2029).
-              I’m interested in quantitative trading, algorithms, and building systems that are measurable and reproducible.
+              I'm pursuing a B.S. in Computational &amp; Applied Mathematics at Carnegie Mellon University (May 2029).
+              I'm interested in quantitative trading, algorithms, and building systems that are measurable and reproducible.
             </p>
             <p class="muted">
               Right now: my main independent project is the Cookie Clicker stock-market autotrader, plus my 15-112 final project.
@@ -131,22 +132,23 @@
               <span class="pill">Python</span>
               <span class="pill">C / C++ (basic)</span>
               <span class="pill">JavaScript</span>
+              <span class="pill">TypeScript</span>
               <span class="pill">HTML/CSS</span>
+              <span class="pill">Next.js</span>
               <span class="pill">Git/GitHub</span>
               <span class="pill">NumPy / pandas</span>
+              <span class="pill">Tailwind CSS</span>
               <span class="pill">LaTeX</span>
               <span class="pill">SQL (basic)</span>
               <span class="pill">Probability/Stats</span>
               <span class="pill">Simulation</span>
-              <span class="pill">TypeScript</span>
-              <span class="pill">Next.js</span>
             </div>
 
             <div class="divider"></div>
 
             <h3>Quick links</h3>
             <div class="link-list">
-              <a class="link" href="research.html">Projects Page →</a>
+              <a class="link" href="research.html">Projects Page &rarr;</a>
               <a class="link" href="mailto:linbog@andrew.cmu.edu">linbog@andrew.cmu.edu</a>
               <a class="link" href="https://www.linkedin.com/in/linbo-gong-41b548296" target="_blank" rel="noopener">LinkedIn</a>
               <a class="link" href="https://github.com/linbo271828-cell" target="_blank" rel="noopener">GitHub</a>
@@ -156,7 +158,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS (no iframe here so it doesn't “feel like it jumps”) -->
+    <!-- PROJECTS -->
     <section id="projects" class="section alt">
       <div class="container">
         <div class="section-head reveal">
@@ -166,12 +168,54 @@
         </div>
 
         <div class="cards-3">
+          <article class="project-card reveal">
+            <div class="project-visual">
+              <div class="img-placeholder" style="background: linear-gradient(135deg, #2563eb, #6366f1);">Quant Risk Snapshot</div>
+            </div>
+            <div class="project-info">
+              <h3>Quant Risk Snapshot</h3>
+              <p>
+                A portfolio risk analytics dashboard. Enter stocks you own, get a full risk report:
+                equity curve, Sharpe ratio, VaR/CVaR, correlation heatmap, risk contributions,
+                and an optional min-variance / risk-parity rebalancer.
+              </p>
+              <div class="project-tech">
+                <span>Next.js</span><span>TypeScript</span><span>Recharts</span><span>Tailwind CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://quant-risk-snapshot.vercel.app" target="_blank" rel="noopener">Live App &rarr;</a>
+                <a href="https://github.com/linbo271828-cell/quant-risk-snapshot" target="_blank" rel="noopener">View Source</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual">
+              <div class="img-placeholder" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">1hr Crossy Road</div>
+            </div>
+            <div class="project-info">
+              <h3>Crossy Road Challenge</h3>
+              <p>
+                A speed-coding challenge where I recreated the core mechanics of
+                Crossy Road in under one hour. Features dynamic lane generation,
+                obstacle movement, and collision detection.
+              </p>
+              <div class="project-tech">
+                <span>Python</span><span>Game Dev</span><span>Speed Coding</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/linbo271828-cell/1hr-Crossy-Roads" target="_blank" rel="noopener">View Source</a>
+              </div>
+            </div>
+          </article>
+
           <article class="card reveal">
-            <h3>Cookie Clicker Stock-Market Autotrader</h3>
+            <h3>Cookie Clicker Autotrader</h3>
             <p class="muted">
-              My main independent project: strategy design + a tick-accurate simulator + evaluation vs baselines.
+              My main independent project: strategy design + a tick-accurate
+              simulator + evaluation vs baselines.
             </p>
-            <a class="link" href="research.html#cookie-clicker">Open →</a>
+            <a class="link" href="research.html#cookie-clicker">Open &rarr;</a>
           </article>
 
           <article class="card reveal">
@@ -179,53 +223,7 @@
             <p class="muted">
               Playable CMU 15-112 final project embed (shown large on the Projects Page).
             </p>
-            <a class="link" href="research.html#final-112">Play →</a>
-          </article>
-
-          <article class="project-card">
-              <div class="project-visual">
-                  <div class="img-placeholder" style="background: #27ae60;">[Crossy Road Screenshot]</div>
-              </div>
-              <div class="project-info">
-                  <h3>Crossy Road Challenge</h3>
-                  <p>
-                      A speed-coding challenge where I recreated the core mechanics of the classic "Crossy Road" game in under one hour. 
-                      Features include dynamic lane generation, obstacle movement, and collision detection.
-                  </p>
-                  <div class="project-tech">
-                      <span>Python</span><span>Game Dev</span><span>Speed Coding</span>
-                  </div>
-                  <div class="project-links">
-                      <a href="https://github.com/linbo271828-cell/1hr-Crossy-Roads" target="_blank">
-                          <i class="fab fa-github"></i> View Source
-                      </a>
-                  </div>
-              </div>
-          </article>
-
-          <article class="project-card">
-              <div class="project-visual">
-                  <div class="img-placeholder" style="background: linear-gradient(135deg, #2563eb, #6366f1);">Quant Risk Snapshot</div>
-              </div>
-              <div class="project-info">
-                  <h3>Quant Risk Snapshot</h3>
-                  <p>
-                      A portfolio risk analytics dashboard. Enter stocks you own, get a full risk report:
-                      equity curve, Sharpe ratio, VaR/CVaR, correlation heatmap, risk contributions,
-                      and an optional min-variance / risk-parity rebalancer.
-                  </p>
-                  <div class="project-tech">
-                      <span>Next.js</span><span>TypeScript</span><span>Recharts</span><span>Tailwind CSS</span>
-                  </div>
-                  <div class="project-links">
-                      <a href="https://quant-risk-snapshot.vercel.app" target="_blank">
-                          Live App
-                      </a>
-                      <a href="https://github.com/linbo271828-cell/quant-risk-snapshot" target="_blank">
-                          View Source
-                      </a>
-                  </div>
-              </div>
+            <a class="link" href="research.html#final-112">Play &rarr;</a>
           </article>
 
           <article class="card reveal">
@@ -233,7 +231,7 @@
             <p class="muted">
               Static, no framework. Responsive + accessible, easy to maintain.
             </p>
-            <a class="link" href="research.html#portfolio">How it’s built →</a>
+            <a class="link" href="research.html#portfolio">How it's built &rarr;</a>
           </article>
         </div>
       </div>
@@ -244,7 +242,7 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="kicker">Contact</p>
-          <h2>Let’s connect.</h2>
+          <h2>Let's connect.</h2>
           <p class="muted">Best way to reach me is email.</p>
         </div>
 
@@ -267,7 +265,7 @@
 
     <footer class="footer">
       <div class="container footer-row">
-        <div class="muted">© <span id="year"></span> Linbo Gong</div>
+        <div class="muted">&copy; <span id="year"></span> Linbo Gong</div>
         <div class="footer-links">
           <a href="#about">About</a>
           <a href="research.html">Projects Page</a>
@@ -283,4 +281,3 @@
   </main>
 </body>
 </html>
-
