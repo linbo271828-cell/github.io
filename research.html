@@ -30,6 +30,7 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html#about">About</a>
         <a href="index.html#contact">Contact</a>
+        <a href="#deep-hedging">Deep Hedging</a>
         <a href="#cookie-clicker">Autotrader</a>
         <a href="#final-112">15-112</a>
       </nav>
@@ -49,6 +50,7 @@
 
     <div id="mobilePanel" class="mobile-panel" aria-label="Mobile navigation">
       <a href="index.html">Home</a>
+      <a href="#deep-hedging">Deep Hedging</a>
       <a href="#cookie-clicker">Autotrader</a>
       <a href="#final-112">15-112</a>
       <a href="index.html#contact">Contact</a>
@@ -60,15 +62,56 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="kicker">Projects</p>
-          <h1 class="page-title">Cookie Clicker autotrader + 15-112</h1>
+          <h1 class="page-title">Deep Hedging + Autotrader + 15-112</h1>
           <p class="muted" style="max-width: 75ch;">
-            Here are my current projects: the Cookie Clicker stock-market autotrader (main independent project),
-            and my CMU 15-112 final project (playable embed).
+            Here are my current projects: Deep Hedging Lab, the Cookie Clicker stock-market autotrader
+            (main independent project), and my CMU 15-112 final project (playable embed).
           </p>
         </div>
 
+        <section id="deep-hedging" class="card reveal anchor-pad">
+          <h2>Deep Hedging Lab</h2>
+          <p class="muted">
+            A full-stack quantitative finance research app comparing classical Black-Scholes hedging
+            with learned neural hedging policies under transaction costs. The backend runs simulated
+            experiments end-to-end, and the frontend presents results through metrics tables, P&amp;L
+            distributions, and interactive 3D hedge surfaces.
+          </p>
+
+          <ul class="bullets muted">
+            <li><strong>ML core:</strong> PyTorch feedforward hedgers trained on CVaR tail-risk objectives.</li>
+            <li><strong>Backend:</strong> FastAPI endpoints for preset listing, run creation, run polling, and result retrieval.</li>
+            <li><strong>Frontend:</strong> Next.js experiment launcher + run dashboard with 3D surface visualization.</li>
+            <li><strong>Research rigor:</strong> explicit classical benchmark comparisons and reproducible experiment configs.</li>
+          </ul>
+
+          <div class="callouts">
+            <div class="callout">
+              <strong>Status</strong>
+              <span class="muted">Active research build</span>
+            </div>
+            <div class="callout">
+              <strong>Tech</strong>
+              <span class="muted">Python, FastAPI, PyTorch, Next.js</span>
+            </div>
+            <div class="callout">
+              <strong>Links</strong>
+              <span class="muted">
+                <a class="link" href="https://github.com/linbo271828-cell/deep-hedging" target="_blank" rel="noopener">Repo</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="actions">
+            <a class="btn primary" href="https://github.com/linbo271828-cell/deep-hedging" target="_blank" rel="noopener">
+              View Repository
+            </a>
+            <a class="btn" href="index.html#projects">Back to homepage projects</a>
+          </div>
+        </section>
+
         <!-- COOKIE CLICKER FIRST (so it doesn't feel like it jumps into 112) -->
-        <section id="cookie-clicker" class="card reveal anchor-pad">
+        <section id="cookie-clicker" class="card reveal anchor-pad" style="margin-top: 16px;">
           <h2>Cookie Clicker Stock-Market Autotrader</h2>
           <p class="muted">
             A trading-agent project framed around decision-making under uncertainty. I’m building this with
